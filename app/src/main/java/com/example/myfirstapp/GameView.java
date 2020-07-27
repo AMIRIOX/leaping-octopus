@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
+import android.view.MotionEvent;
 import  android.view.SurfaceView;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -9,6 +10,7 @@ import android.graphics.Canvas;
 //import android.graphics.Path;
 //import android.util.AttributeSet;
 import android.view.SurfaceHolder;
+import android.widget.Toast;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback{
     private  MainThread thread;
@@ -38,7 +40,34 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback{
             retry = false;
         }
     }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        float xo = event.getX();
+        float yo = event.getY();
+        switch (event.getAction()) {
+            //触摸屏幕时刻
+            case MotionEvent.ACTION_DOWN:
+                // process_interactive();
+                // characterSprite.pro_upgrade((int)xo,(int)yo);
+                characterSprite.change_xy_oi((int)xo,(int)yo);
+                break;
+            //触摸并移动时刻
+            case MotionEvent.ACTION_MOVE:
+                // characterSprite.pro_upgrade((int)xo,(int)yo);
+                // process_interactive();
+                characterSprite.change_xy_oi((int)xo,(int)yo);
+                break;
+            //终止触摸时刻
+            case MotionEvent.ACTION_UP:
+                // characterSprite.pro_upgrade((int)xo,(int)yo);
+                // process_interactive();
+                characterSprite.change_xy_oi((int)xo,(int)yo);
+                break;
+        }
+        return super.onTouchEvent(event);
+    }
     public void update() {
+        characterSprite.pro_upgrade();
         characterSprite.update();
     }
     @Override
