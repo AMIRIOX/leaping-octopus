@@ -14,7 +14,7 @@
       "versionCode": 1,
       "versionName": "1",
       "enabled": true,
-      "outputFile": "app-release.apk"
+      "outputFile": "octopus-release-v1.0.apk"
     }
   ]
 }

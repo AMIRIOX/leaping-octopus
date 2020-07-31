@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.airx.octopus;
 
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;

@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.airx.octopus;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;

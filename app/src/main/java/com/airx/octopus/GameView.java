@@ -1,4 +1,4 @@
-package com.example.myfirstapp;
+package com.airx.octopus;
 import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.view.MotionEvent;
@@ -10,7 +10,6 @@ import android.graphics.Canvas;
 //import android.graphics.Path;
 //import android.util.AttributeSet;
 import android.view.SurfaceHolder;
-import android.widget.Toast;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback{
     private  MainThread thread;
